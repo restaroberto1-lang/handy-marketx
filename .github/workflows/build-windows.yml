@@ -1,0 +1,22 @@
+name: "Build Windows (MarketX Voice)"
+
+# Build manuale del solo installer Windows x64, NON firmato, per distribuzione
+# diretta (es. amici/esterni). Produce .exe (NSIS) e .msi come artefatti
+# scaricabili. Avvio: Actions > "Build Windows (MarketX Voice)" > Run workflow,
+# oppure `gh workflow run build-windows.yml`.
+
+on: workflow_dispatch
+
+jobs:
+  windows:
+    permissions:
+      contents: write
+    uses: ./.github/workflows/build.yml
+    with:
+      platform: "windows-latest"
+      target: "x86_64-pc-windows-msvc"
+      build-args: ""
+      sign-binaries: false
+      upload-artifacts: true
+      no-cache: true
+    secrets: inherit
