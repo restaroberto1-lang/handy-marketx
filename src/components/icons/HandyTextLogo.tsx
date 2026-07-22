@@ -24,7 +24,7 @@ const HandyTextLogo = ({
       <text
         x="0"
         y="62"
-        fontFamily="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+        fontFamily="'Poppins', -apple-system, BlinkMacSystemFont, system-ui, sans-serif"
         fontSize="62"
         fontWeight="800"
         letterSpacing="-2"
@@ -35,7 +35,7 @@ const HandyTextLogo = ({
       <text
         x="3"
         y="96"
-        fontFamily="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+        fontFamily="'Poppins', -apple-system, BlinkMacSystemFont, system-ui, sans-serif"
         fontSize="22"
         fontWeight="600"
         letterSpacing="9"
