@@ -121,6 +121,18 @@ export const Sidebar: React.FC<SidebarProps> = ({
           );
         })}
       </div>
+
+      {/* Firma — Roberto Resta · MarketX (in fondo, sempre visibile) */}
+      {/* eslint-disable-next-line i18next/no-literal-string */}
+      <div className="mt-auto w-full pb-3 pt-4 text-center leading-tight">
+        <p className="text-[10px] text-text/35">by Roberto Resta</p>
+        <p
+          className="text-[11px] font-bold text-text/55"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
+          MarketX
+        </p>
+      </div>
     </div>
   );
 };

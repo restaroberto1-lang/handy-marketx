@@ -29,11 +29,11 @@ export const AboutSettings: React.FC = () => {
     fetchVersion();
   }, []);
 
-  const handleDonateClick = async () => {
+  const handleCreditClick = async () => {
     try {
-      await openUrl("https://handy.computer/donate");
+      await openUrl("https://marketx.it");
     } catch (error) {
-      console.error("Failed to open donate link:", error);
+      console.error("Failed to open credit link:", error);
     }
   };
 
@@ -53,15 +53,17 @@ export const AboutSettings: React.FC = () => {
 
         <ShowWhatsNewOnUpdate descriptionMode="tooltip" grouped={true} />
 
+        {/* eslint-disable i18next/no-literal-string */}
         <SettingContainer
-          title={t("settings.about.supportDevelopment.title")}
-          description={t("settings.about.supportDevelopment.description")}
+          title="Realizzato da"
+          description="MarketX Voice è un'app di Roberto Resta · MarketX. Trascrizione vocale locale, privata e senza abbonamento."
           grouped={true}
         >
-          <Button variant="primary" size="md" onClick={handleDonateClick}>
-            {t("settings.about.supportDevelopment.button")}
+          <Button variant="primary" size="md" onClick={handleCreditClick}>
+            Roberto Resta · MarketX
           </Button>
         </SettingContainer>
+        {/* eslint-enable i18next/no-literal-string */}
 
         <SettingContainer
           title={t("settings.about.sourceCode.title")}
@@ -71,7 +73,9 @@ export const AboutSettings: React.FC = () => {
           <Button
             variant="secondary"
             size="md"
-            onClick={() => openUrl("https://github.com/cjpais/Handy")}
+            onClick={() =>
+              openUrl("https://github.com/restaroberto1-lang/handy-marketx")
+            }
           >
             {t("settings.about.sourceCode.button")}
           </Button>

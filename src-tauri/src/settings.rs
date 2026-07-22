@@ -857,11 +857,21 @@ pub fn get_default_settings() -> AppSettings {
         clamshell_microphone: None,
         selected_output_device: None,
         translate_to_english: false,
-        selected_language: "auto".to_string(),
+        selected_language: default_selected_language(),
         overlay_position: default_overlay_position(),
         debug_mode: false,
         log_level: default_log_level(),
-        custom_words: Vec::new(),
+        // Lessico MarketX preimpostato: i termini distintivi del mondo MarketX
+        // arrivano gia' pronti per il team (correzione fonetica in trascrizione).
+        custom_words: [
+            "MarketX", "MOL", "GrowthX", "Cloudflare", "Vercel", "GitHub", "Obsidian",
+            "GoHighLevel", "GHL", "HubSpot", "ActiveCampaign", "Brevo", "Pipedrive",
+            "ClickUp", "Airtable", "ROAS", "retargeting", "Meta Ad Library",
+            "Corpo Sostenibile", "Nemotron", "Whisper", "Anthropic", "n8n", "Hostinger",
+        ]
+        .iter()
+        .map(|s| s.to_string())
+        .collect(),
         model_unload_timeout: ModelUnloadTimeout::default(),
         word_correction_threshold: default_word_correction_threshold(),
         history_limit: default_history_limit(),
