@@ -509,7 +509,8 @@ fn default_whats_new_last_seen_version() -> String {
 }
 
 fn default_selected_language() -> String {
-    "auto".to_string()
+    // MarketX Voice: dettato in italiano di default (l'utente puo' cambiarlo).
+    "it".to_string()
 }
 
 fn default_overlay_position() -> OverlayPosition {
@@ -572,7 +573,8 @@ fn default_sound_theme() -> SoundTheme {
 }
 
 fn default_theme() -> Theme {
-    Theme::System
+    // MarketX Voice: tema nero di default a prescindere dall'OS.
+    Theme::Dark
 }
 
 fn default_post_process_enabled() -> bool {

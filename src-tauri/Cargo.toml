@@ -1,8 +1,8 @@
 [package]
 name = "handy"
 version = "0.9.4"
-description = "Handy"
-authors = ["cjpais"]
+description = "MarketX Voice"
+authors = ["cjpais", "MarketX"]
 edition = "2021"
 license = "MIT"
 default-run = "handy"
